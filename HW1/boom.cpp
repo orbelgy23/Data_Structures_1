@@ -417,7 +417,7 @@ StatusType Boom::GetMostViewedClasses(int numOfClasses, int *courses, int *class
         zero_node = zero_node->node_get_parent();
     }
     print_from_zero_time(zero_node, &count, courses, classes, numOfClasses);
-    if(tmp == nullptr && count<numOfClasses){
+    if(tmp->get_key() == 0 && count<numOfClasses){
         return FAILURE;
     }
     return SUCCESS;
