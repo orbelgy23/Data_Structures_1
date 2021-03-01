@@ -347,7 +347,7 @@ public:
                         else{                                       //this , it is right son for his parent
                             this->parent->right_node = this->right_node;
                         }
-                        if(smallest==this){ //need to repair
+                        if(smallest==this && this->right_node == nullptr){ //need to repair
                             smallest = this->parent;
                         }
                     }
