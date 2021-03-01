@@ -322,7 +322,7 @@ public:
                         else{                                       //this , it is right son for his parent
                             this->parent->right_node = this->right_node;
                         }
-                        if(smallest==this){ //need to repair - להוריד הצבעות לפני הריסה
+                        if(smallest==this && this->right_node == nullptr){ 
                             smallest = this->parent;
                         }
                     }
